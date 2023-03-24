@@ -1,0 +1,121 @@
+:root {
+    --main-purple-color: #5c48f1;
+    --elements-background-color: #eeecfd;
+    --element-border-color: #e0e0e1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    height: 400px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 0px solid black;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.title {
+    grid-area: 1/1/3/9;
+    background-color: var(--elements-background-color);
+    color: var(--main-purple-color);
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choices {
+    grid-area: 3/1/11/9;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.choices>div {
+    border: 2px solid var(--element-border-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.choices>div input {
+    margin: 0px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--element-border-color);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.new {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    outline: 2px solid var(--element-border-color);
+    border-radius: 5px;
+}
+
+.check input:hover~.new {
+    background-color: rgb(92 72 241 / 0.5);
+    border: 3px solid white;
+    outline: 2px solid var(--main-purple-color);
+}
+
+.check input:checked~.new {
+    background-color: rgb(92 72 241);
+    border: 3px solid white;
+    outline: 2px solid var(--main-purple-color);
+}
+
+.check input:checked~.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(92 72 241 / 0.1);
+    outline: 2px solid var(--main-purple-color);
+}
+
+.icon {
+
+    text-align: center;
+    position: relative;
+}
+
+.icon i {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #5c48f1;
+    font-size: 60px;
+}
+
+.icon p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.test {
+    background: pink;
+    width: 50px;
+    height: 50px;
+}
+
+div p {
+    color: black;
+}
