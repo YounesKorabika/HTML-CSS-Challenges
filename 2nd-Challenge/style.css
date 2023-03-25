@@ -1,0 +1,190 @@
+:root {
+    --background-main-color: #6c5de3;
+    width: 100vw;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 10px;
+    width: 100%;
+    background-color: rgba(15, 8, 108, 0.7);
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    padding: 50px 80px;
+    height: 800px;
+    background-color: rgba(15, 8, 108, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-evenly;
+}
+
+
+.head {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.head p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+}
+
+.cards p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card1 {
+    background-color: white;
+    padding: 25px 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px 0px rgb(1 1 1 / 0.2);
+    z-index: 1;
+    transition: 500ms transform ease;
+}
+
+.card2 {
+    background-color: white;
+    padding: 10px 50px;
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    margin-left: -5px;
+    transition: 500ms transform ease;
+}
+
+.card2 .title {
+    margin-bottom: 0px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.core {
+    position: relative;
+}
+
+.core>*:not(button) {
+    opacity: 0.5;
+}
+
+.price {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    font-size: 40px;
+    margin-left: 5px;
+    position: relative;
+    width: fit-content;
+    left: 10px;
+    top: -5px;
+    transform: scaleY(1.2);
+}
+
+.price:before {
+    content: "$";
+    position: absolute;
+    font-weight: 200;
+    font-size: 20px;
+    left: -10px;
+    top: 0px;
+}
+
+.price:after {
+    content: "USD";
+    position: absolute;
+    font-weight: 200;
+    font-size: 15px;
+    right: -30px;
+    bottom: 0px;
+}
+
+button {
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: goldenrod;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    transition: 500ms transform ease;
+}
+
+
+.title h1 {
+    color: black;
+    font-weight: bold;
+    font-size: 23px;
+    opacity: 0.7;
+    width: fit-content;
+}
+
+.down {
+    font-weight: 100;
+}
+
+.mark {
+    margin-top: -10px;
+    height: 8px;
+    background-color: rgb(255 217 0/ 0.5);
+    border: none;
+}
+
+button:hover {
+    transform: scale(1.1, 1.1) rotate(5deg);
+    cursor: pointer;
+    background-color: var(--background-main-color);
+}
+
+.contact {
+    position: relative;
+    left: 60%;
+}
+
+a i {
+    font-size: 30px;
+    color: white;
+    margin-right: 5px;
+}
+
+.fa-github:hover {
+    color: black;
+}
+
+.fa-facebook:hover {
+    color: rgb(100, 139, 231);
+}
+
+.fa-twitter:hover {
+    color: rgb(12, 162, 243);
+}
+
+.fa-instagram:hover {
+    color: crimson;
+}
+
+.contact span {
+    font-family: Arial, Helvetica, sans-serif;
+    color: palevioletred;
+    font-size: 25px;
+    font-weight: bold;
+}
