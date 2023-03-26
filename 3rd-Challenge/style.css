@@ -1,0 +1,126 @@
+:root {
+    --wp--preset--color--pale-pink: #f78da7;
+    --wp--preset--color--vivid-red: #cf2e2e;
+    line-height: 1.4;
+}
+
+.container {
+    min-width: 800px;
+    height: 600px;
+    display: flex;
+    margin: auto;
+
+}
+
+.left {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    left: 20px;
+}
+
+p {
+    line-height: 2.0;
+}
+
+span {
+    font-size: 45px;
+}
+
+.shape {
+    position: relative;
+    background-color: transparent;
+    width: 350px;
+    height: 270px;
+    border: 10px solid var(--wp--preset--color--pale-pink);
+    margin-right: -180px;
+}
+
+.tww {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    width: 80%;
+}
+
+.right {
+    height: 80%;
+}
+
+.two {
+    width: 90%;
+    opacity: 0.5;
+}
+
+.three {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.three div {
+    width: 30%;
+    height: 150px;
+
+}
+
+.left img {
+    width: 360px;
+    height: 220px;
+    position: absolute;
+    bottom: 25px;
+    left: -40px;
+
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(51 51 51/ 0.4);
+    position: relative;
+}
+
+.icon span {
+    font-size: 80px;
+    color: #cf2e2e;
+    margin-top: 20px;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    color: #cf2e2e;
+}
+
+h4 span {
+    font-size: 90px;
+    margin-right: 0px;
+    color: #f78da7;
+    display: flex;
+
+}
+
+h3 {
+    margin: 0;
+}
+
+
+.icon:before {
+    content: "";
+    border: 20px solid;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -15px;
+    top: -15px;
+    border-color: transparent transparent transparent crimson;
+}
