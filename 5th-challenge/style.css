@@ -1,0 +1,46 @@
+span {
+    background-color: red;
+    padding: 20px 20px;
+    position: relative;
+    top: 150px;
+    left: 200px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+span:before {
+    content: "This is Tooltip Content";
+    position: absolute;
+    top: -60px;
+    transform: translate(-50%, 0px);
+    left: 50%;
+    width: 250px;
+    text-align: center;
+    padding: 10px 25px;
+    background-color: #333;
+    color: white;
+    transition: 500ms opacity;
+    opacity: 0;
+}
+
+span:after {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-color: #333 transparent transparent transparent;
+    top: -18px;
+    left: 50%;
+    transition: 400ms opacity;
+    transform: translate(-50%, 0px);
+    opacity: 0;
+}
+
+span:hover:before,
+span:hover:after {
+    opacity: 1;
+
+}
