@@ -1,0 +1,270 @@
+:root {
+    --back-color: rgb(17, 16, 60);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    min-width: 800px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color: #eee;
+}
+
+.up {
+    display: grid;
+    position: relative;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    min-width: 800px;
+    max-width: 1100px;
+    min-height: 600px;
+    max-height: 800px;
+    grid-gap: 20px;
+}
+
+.up .image {
+    position: relative;
+    grid-area: 1/1/2/3;
+}
+
+.image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.up .image:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(255, 81, 0);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.card {
+    width: 42%;
+    height: 95%;
+    background-color: rgb(37, 34, 34);
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: 20px;
+    border-radius: 5px;
+    padding: 35px;
+    line-height: 1.9;
+}
+
+.card h1 {
+    width: 300px;
+    font-size: 60px;
+    color: rgb(235, 232, 232);
+    opacity: 0.9;
+    font-weight: 300;
+    position: relative;
+    line-height: 1.2;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background-color: orangered;
+    margin: 20px;
+    position: relative;
+    right: 15px;
+}
+
+.card p {
+    position: relative;
+    left: 30px;
+    font-size: 20px;
+    color: rgb(235, 232, 232);
+    opacity: 0.9;
+    line-height: 2.2;
+}
+
+.card p::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    left: -30px;
+    top: 17px;
+    border: 4px solid rgb(92, 192, 92);
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+
+button {
+    background-color: orangered;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 50px;
+}
+
+.cur {
+    grid-area: 2/2/3/3;
+    height: 250px;
+    border: 3px solid orangered;
+    right: 30px;
+    top: 10px;
+    position: relative;
+    padding: 40px 35px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.down .left {
+    position: relative;
+}
+
+.middle {
+
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle div {
+    width: 30%;
+    height: 450px;
+    background-color: rgb(30 89 218 / 0.08);
+    padding: 30px 20px;
+    position: relative;
+}
+
+.middle div .num {
+    color: orangered;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.middle div h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.middle div p {
+    font-size: 22px;
+    width: 80%;
+    line-height: 1.9;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.middle div .more {
+    color: orangered;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: fit-content;
+    position: absolute;
+    bottom: 40px;
+}
+
+.middle div .more:before {
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: orangered;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+}
+
+.middle div .more:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border: 2px solid orangered;
+    border-top: none;
+    border-left: none;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    right: -15px;
+    transform: rotate(-40deg);
+}
+
+.down {
+    height: 500px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.down2 .left {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    padding: 10px 0px;
+}
+
+.down2 {
+    height: 500px;
+    position: relative;
+    display: flex;
+    padding: 40px;
+    gap: 20px;
+    color: white;
+}
+
+.left h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.left p {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.down>img {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    filter: brightness(0.4);
+}
+
+.down2 button {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+}
+
+.right {
+    width: 50%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.right>img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(1.5);
+}
+
+button:hover {
+    background-color: rebeccapurple;
+    color: white;
+    cursor: pointer;
+}
