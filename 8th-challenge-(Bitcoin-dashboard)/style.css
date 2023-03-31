@@ -1,0 +1,354 @@
+:root {
+    --main-color: rgb(50 6 212 / 0.9);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --field-color: rgba(132, 158, 203, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+body {
+    min-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    min-height: 100vh;
+}
+
+.nav {
+    grid-area: 1/1/11/2;
+    background-color: rgb(50 6 212 / 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav ul {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+    position: sticky;
+    top: 10px;
+}
+
+.nav li {
+    all: unset;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px 25px;
+}
+
+.nav li:hover {
+    background-color: rgb(0, 140, 255);
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.head {
+    grid-area: 1 / 2 / 3 / 17;
+    max-height: 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 5px 0px 60px;
+    position: relative;
+}
+
+.logo {
+    width: 50%;
+    height: 50%;
+}
+
+.info {
+    width: 50%;
+    text-align: end;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    right: 40px;
+}
+
+.info .money {
+    display: flex;
+}
+
+.info .money div {
+    padding: 9px 20px;
+    height: fit-content;
+}
+
+.info .money .ml {
+    background-color: rgb(0 0 255/ 0.1);
+    border: 1px solid rgb(0 0 255/ 0.1);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.info .money .mr {
+    border: 1px solid rgb(231, 228, 228);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.info .name i {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+.info .name {
+    margin-left: 15px;
+    position: relative;
+    color: rgba(38, 38, 205, 0.7);
+
+}
+
+.info .name:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid;
+    right: -15px;
+    top: calc(25% - 7px);
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+}
+
+.info .money div i {
+    font-size: 16px;
+    margin-left: 13px;
+}
+
+.head p {
+    color: rgb(0, 115, 255);
+    text-transform: capitalize;
+}
+
+.core {
+    grid-area: 3/2/11/17;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    z-index: -1;
+}
+
+.core .left {
+    width: 40%;
+    padding: 15px 5px;
+}
+
+.core .left .buy {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.core2 {
+    position: relative;
+}
+
+.core2 p {
+    margin-bottom: 15px;
+}
+
+.core2 .same {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(132, 158, 203, 0.2);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.core2 .same.h:before {
+    content: "";
+    border: 5px solid gray;
+    border-color: gray transparent transparent transparent;
+    position: absolute;
+    top: calc(50% - 2.5px);
+    right: 50%;
+}
+
+.core2 .same:after {
+    content: "125.00 USD";
+    font-size: 14px;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 55%;
+}
+
+.core .left .buy div {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.core .buy .buy1 {
+    width: 47%;
+    height: fit-content;
+    background-color: var(--main-color);
+    color: white;
+    border: 0.1px solid var(--main-color);
+}
+
+.core .buy .sel1 {
+    width: 47%;
+    height: fit-content;
+    color: var(--main-color);
+    border: 0.1px solid rgb(154, 144, 144);
+}
+
+.core .core3 {
+    width: 50%;
+}
+
+.last {
+    margin-top: -10px;
+    opacity: 0.5;
+}
+
+.last2 {
+    color: rgba(0, 0, 0, 0.395);
+}
+
+.last2::before {
+    content: "$49750 remaining";
+    position: absolute;
+    right: 5px;
+    bottom: -25px;
+    color: black;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.core2 button {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(9, 196, 24);
+    color: rgb(244, 244, 244);
+    font-size: 18px;
+    margin-bottom: 80px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.core3 .right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.core3 .right .head2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.head2 .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--main-color);
+}
+
+.head2 img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5, 1.5) translate(-5px, 5px);
+}
+
+.head2 .img2 {
+    transform: scale(4, 2.7) translate(1px, 11px);
+}
+
+.left2,
+.right2 {
+    display: flex;
+    width: 200px;
+}
+
+.head2 span {
+    margin-left: 10px;
+}
+
+.head2 p {
+    margin-left: 60px;
+    color: rgb(24, 111, 217);
+    font-weight: 100;
+}
+
+.bod {
+    display: flex;
+    gap: 15px;
+    margin-top: 43px;
+}
+
+.bod div {
+    width: 100%;
+    padding: 18px;
+    background-color: var(--field-color);
+}
+
+.bod div:not(.sa) {
+    color: rgb(0, 98, 255);
+}
+
+.bod .sa {
+    color: rgba(0, 0, 0, 0.562);
+}
+
+.bod div:before {
+    position: absolute;
+    left: 45%;
+}
+
+.bod .one:before {
+    content: "hello";
+}
+
+.bod .two:before {
+    content: " Islamic Country ***** 1010";
+}
+
+.bod .three:before {
+    content: "0.00212455 BTC";
+}
+
+.bod .four:before {
+    content: "$28.00 USD";
+}
+
+.bod .five:before {
+    content: "$854.00 USD";
+}
+
+.bod .six:before {
+    content: "$25.00 USD";
+    color: red;
+}
+
+.bod .seven:before {
+    content: "$1232.00 USD";
+}
